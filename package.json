@@ -1,0 +1,84 @@
+{
+  "name": "project-management-system-backend",
+  "version": "1.0.0",
+  "description": "Backend project with NodeJS, ExpressJS, MongoDB and Socket.io to create a REST API with JWT that allows managing projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CristianBonilla/project-management-system-backend.git"
+  },
+  "author": {
+    "name": "Cristian Camilo Bonilla",
+    "email": "cristiancamilo10_95@outlook.com",
+    "url": "https://www.linkedin.com/in/cristian-bonilla95"
+  },
+  "keywords": [
+    "Node",
+    "TypeScript",
+    "Mongoose",
+    "Express",
+    "Socket.io"
+  ],
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=16.20.0",
+    "npm": ">=8.19.2",
+    "yarn": ">=1.22.5"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/main.js",
+    "start:pro": "cross-env NODE_ENV=production node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/main.js",
+    "build": "del-cli ./dist && tsc -p ./tsconfig.json",
+    "pro": "yarn run build && yarn run start:pro",
+    "dev": "cross-env NODE_ENV=development nodemon ./nodemon.json",
+    "watch": "yarn run build --watch",
+    "lint": "eslint -c ./.eslintrc --ext .ts ./src"
+  },
+  "dependencies": {
+    "async": "^3.2.6",
+    "body-parser": "^2.2.0",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-myconnection": "^1.0.4",
+    "get-port": "^7.1.0",
+    "helmet": "^8.1.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.15.1",
+    "morgan": "^1.10.0",
+    "nconf": "^0.13.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/async": "^3.2.24",
+    "@types/body-parser": "^1.19.5",
+    "@types/compression": "^1.8.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/express-myconnection": "^1.0.37",
+    "@types/morgan": "^1.9.9",
+    "@types/nconf": "^0.10.7",
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "chai": "^5.2.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.7.1",
+    "eslint-plugin-n": "^17.19.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-promise": "^7.2.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}

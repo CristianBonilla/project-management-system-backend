@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "baseUrl": "./",
+    "lib": [
+      "ES2024.Collection"
+    ],
+    "paths": {
+      "@const/*": [
+        "src/app/constants/*"
+      ],
+      "@env/*": [
+        "src/config/environments/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@utils/*": [
+        "src/app/utils/*"
+      ],
+      "@interfaces/*": [
+        "src/app/interfaces/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@repos/*": [
+        "src/app/repositories/*"
+      ],
+      "@domain/*": [
+        "src/app/domain/*"
+      ],
+      "@routes/*": [
+        "src/app/routes/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
